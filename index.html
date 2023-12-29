@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+    <p>
+    <h2>Import the data</h2>
+    </p>
+    <div class="container">
+        <div class="steps">
+            <h3>Step 1</h3>
+            <input type="file" id="file-input" accept=".json, .csv">
+            <p style="font-size: 14px;">Supported File Type(s) : .CSV , .JSON</p>
+
+        </div>
+
+        <div class="steps" id="step-2">
+            <h3>Step 2 - Specify Format</h3>
+            <div style="display: flex; flex-direction: column">
+                <div style="display: flex; gap: 200px">
+                    <label>File Type</label>
+                    <select>
+                        <option value="json">json</option>
+                        <option value="csv">csv</option>
+                    </select>
+                </div>
+                <br />
+                <div style="display: flex; gap: 120px">
+                    <label for="character-encoding">Character Encoding</label>
+                    <select id="character-encoding">
+                        <option value="utf-8">UTF-8</option>
+                        <option value="utf-16">UTF-16</option>
+
+                    </select>
+                </div>
+                <br />
+                <div style="display: flex; gap: 200px">
+                    <label for="delimiter">Delimiter</label>
+                    <select>
+                        <option value=",">Comma (,)</option>
+                        <option value=";">Semicolon (;)</option>
+                    </select>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="steps" id="step-3">
+            <div class="step" id="step-3">
+                <h3>Step 3</h3>
+                <div id="display-options">
+                    <select id="available-fields" multiple></select>
+                    <div id="action-buttons">
+                        <button onclick="moveFields('available-fields', 'displayed-fields')">>></button><br><br>
+                        <button onclick="moveFields('displayed-fields', 'available-fields')">&lt;&lt;</button>
+                    </div>
+                    <select id="displayed-fields" multiple></select>
+                </div>
+            </div>
+        </div>
+
+        <div style="grid-column-start: 2; text-align: right; margin-right: 50px;">
+            <button onclick="displayData()"
+                style="background-color: green; width: 70px; height: 30px; color: white;">Next</button>
+            <button onclick="cancelSelection()" style="width: 70px; height: 30px;">Cancel</button>
+        </div>
+    </div>
+
+    <div id="display-screen">
+        <h1>Data Displayer</h1>
+        <table id="data-table">
+            <thead>
+                <tr id="table-header"></tr>
+            </thead>
+            <tbody id="table-body"></tbody>
+        </table>
+    </div>
+
+
+    <script src="script.js"> </script>
+
+</body>
+
+</html>

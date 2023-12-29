@@ -1,1 +1,3 @@
-# Zentrades_Task-02
+# Task 2
+ZenTrade Assignment - 20BCE290
+

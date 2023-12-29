@@ -1,0 +1,83 @@
+body {
+    background-color: #e9e7e7
+        /* Light grey background color */
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 5px;
+}
+
+#display-options {
+    margin: 10px 0;
+    display: flex;
+    flex-direction: row;
+    /* Ensure a horizontal layout */
+    align-items: center;
+}
+
+select {
+    height: 25px;
+    width: 200px;
+    margin-right: 10px;
+}
+
+#available-fields,
+#displayed-fields {
+    margin: 10px;
+    width: 150px;
+    height: 150px;
+}
+
+.steps {
+    font-size: 20px;
+    background-color: white;
+    border: 2px gray solid;
+    margin: 5px;
+    padding: 15px;
+}
+
+#step-2 {
+    display: grid;
+    grid-template: 1fr 1fr;
+    align-items: center;
+    /* Center items vertically */
+}
+
+#step-3 {
+    grid-column-start: 1;
+    grid-column-end: 4;
+}
+
+
+/* New styles for buttons */
+#action-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10px;
+}
+
+#action-buttons button {
+    margin: 5px;
+    padding: 8px;
+    font-size: 16px;
+}
+
+#data-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+#data-table th, #data-table td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+}
+
+#data-table th {
+    background-color: #f2f2f2;
+}
+
